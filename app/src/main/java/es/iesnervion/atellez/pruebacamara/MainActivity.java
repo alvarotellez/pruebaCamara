@@ -53,6 +53,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             img.setImageBitmap(imageBitmap);
         }
     }
-
+    //http://gpmess.com/blog/2013/10/02/como-cargar-fotos-en-una-aplicacion-android-desde-camara-galeria-y-otras-aplicaciones/
 
 }

@@ -54,5 +54,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
     //http://gpmess.com/blog/2013/10/02/como-cargar-fotos-en-una-aplicacion-android-desde-camara-galeria-y-otras-aplicaciones/
+    //http://www.theappguruz.com/blog/android-take-photo-camera-gallery-code-sample
 
 }

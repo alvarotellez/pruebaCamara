@@ -13,10 +13,17 @@ import android.provider.MediaStore;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -43,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (takePictureIntent.resolveActivity(getPackageManager()) != null) {
             startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
+
         }
 
     }
@@ -51,9 +59,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Bundle extras = data.getExtras();
             Bitmap imageBitmap = (Bitmap) extras.get("data");
             img.setImageBitmap(imageBitmap);
+
+
         }
     }
-    //http://gpmess.com/blog/2013/10/02/como-cargar-fotos-en-una-aplicacion-android-desde-camara-galeria-y-otras-aplicaciones/
-    //http://www.theappguruz.com/blog/android-take-photo-camera-gallery-code-sample
+
+    //HAY QUE IMPLEMENTAR QUE GUARDE EL FICHERO DE LA FOTO QUE HACEMOS PARA ASI PODER COMPARTIRLO EN INSTAGRAM
 
 }
